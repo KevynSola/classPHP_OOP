@@ -8,7 +8,9 @@
 </head>
 <body>
     <h1>Exercice de POO</h1>
-    <?php require_once "car.php";
+    <?php 
+    require_once "car.php";
+    require_once "bicycle.php";
     
     $bmw = new Car ('Black', 4, 'Gazole');
     var_dump($bmw);
@@ -16,7 +18,7 @@
     $volvo = new Car ('Blue', 4, 'Essence');
     var_dump($volvo);
 
-    $ayaNakamura = new Car ('Noire', 1, 'A la force des jambes');
+    $ayaNakamura = new Bicycle ('Noire');
     var_dump($ayaNakamura);
     ?>
 </body>
