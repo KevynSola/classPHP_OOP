@@ -2,12 +2,12 @@
 
 class Vehicle 
 {
-    private int $nbrWheels;
-    private int $currentSpeed;
-    private string $color;
-    private int $nbrSeats;
-    private string $typeEnergy;
-    private int $levelEnergy;
+    protected int $nbrWheels = 4;
+    protected int $currentSpeed = 0;
+    protected string $color;
+    protected int $nbrSeats;
+    protected string $typeEnergy;
+    protected int $levelEnergy = 0;
 
 
     public function __construct(string $color, int $nbrSeats, string $typeEnergy)
@@ -24,8 +24,8 @@ class Vehicle
 
     public function forward(): string
     {
-        $this->currentSpeed = 30;
-        return "On avance";
+        $this->currentSpeed = 15;
+        return "On avance !";
     }
 
     public function brake(): string
@@ -40,12 +40,12 @@ class Vehicle
     }
 
     // Wheels fonction
-    public function setNbWheels(int $nbrWheels): void
+    public function setNbrWheels(int $nbrWheels): void
     {
         $this->nbrWheels = $nbrWheels;
     }
 
-    public function getNbWheels()
+    public function getNbrWheels()
     {
         return $this->nbrWheels;
     }
@@ -75,12 +75,12 @@ class Vehicle
     }
 
     // Seats fonction
-    public function getNbSeats()
+    public function getNbrSeats()
     {
         return $this->nbrSeats;
     }
 
-    public function setSeats(string $nbrSeats): void
+    public function setNbrSeats(string $nbrSeats): void
     {
         $this->nbrSeats = $nbrSeats;
     }

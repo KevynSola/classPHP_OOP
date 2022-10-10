@@ -12,6 +12,7 @@
     require_once "../src/Vehicle.php";
     require_once "../src/Car.php";
     require_once "../src/Bicycle.php";
+    require_once "../src/Truck.php";
     
     $bmw = new Vehicle ('Black', 4, 'Gazole');
     var_dump($bmw);
@@ -20,7 +21,23 @@
     var_dump($volvo);
 
     $ayaNakamura = new Bicycle ('Noire', 2, 'Human');
+    $ayaNakamura->setNbrWheels(2);
     var_dump($ayaNakamura);
+
+    $camion = new Truck ('Red', 3, 'fuel', 100);
+    echo $camion->full(100);
+    echo '<br>';
+    echo $camion->forward() . PHP_EOL;
+    echo $camion->brake();
+    var_dump($camion);
+
+    $buggy = new Truck ('Brown', 3, 'electric', 300);
+    echo $buggy->full(300);
+    echo '<br>';
+    echo $buggy->forward() . PHP_EOL;
+    echo $buggy->brake();
+    var_dump($buggy);
+
     ?>
 </body>
 </html>
