@@ -1,6 +1,6 @@
 <?php
 
-class Car 
+class Vehicle 
 {
     private int $nbrWheels;
     private int $currentSpeed;
@@ -17,9 +17,9 @@ class Car
         $this->typeEnergy = $typeEnergy;
     }
 
-    public function start()
+    public function start(): string
     {
-
+        return "Let's GOOOOO!!";
     }
 
     public function forward(): string
@@ -39,12 +39,18 @@ class Car
         return $sentence;
     }
 
+    // Wheels fonction
+    public function setNbWheels(int $nbrWheels): void
+    {
+        $this->nbrWheels = $nbrWheels;
+    }
+
     public function getNbWheels()
     {
         return $this->nbrWheels;
     }
 
-    // Speed Attributes
+    // Speed fonction
     public function getCurrentSpeed(): int
     {
         return $this->currentSpeed;
@@ -57,7 +63,7 @@ class Car
         }
     }
 
-    // Color Attributes
+    // Color fonction
     public function getColor(): string
     {
         return $this->color;
@@ -68,13 +74,18 @@ class Car
         $this->color = $color;
     }
 
-    // Seats Attributes
+    // Seats fonction
     public function getNbSeats()
     {
         return $this->nbrSeats;
     }
 
-    // Energy attributes
+    public function setSeats(string $nbrSeats): void
+    {
+        $this->nbrSeats = $nbrSeats;
+    }
+
+    // Energy fonction
     public function getTypeEnergy()
     {
         return $this->typeEnergy;

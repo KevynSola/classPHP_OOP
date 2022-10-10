@@ -9,16 +9,17 @@
 <body>
     <h1>Exercice de POO</h1>
     <?php 
-    require_once "car.php";
-    require_once "bicycle.php";
+    require_once "../src/Vehicle.php";
+    require_once "../src/Car.php";
+    require_once "../src/Bicycle.php";
     
-    $bmw = new Car ('Black', 4, 'Gazole');
+    $bmw = new Vehicle ('Black', 4, 'Gazole');
     var_dump($bmw);
 
-    $volvo = new Car ('Blue', 4, 'Essence');
+    $volvo = new Vehicle ('Blue', 4, 'Essence');
     var_dump($volvo);
 
-    $ayaNakamura = new Bicycle ('Noire');
+    $ayaNakamura = new Bicycle ('Noire', 2, 'Human');
     var_dump($ayaNakamura);
     ?>
 </body>
